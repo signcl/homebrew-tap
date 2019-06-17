@@ -2,7 +2,7 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes"
   homepage "https://openbayes.com"
-  url "https://github.com/signcl/openbayes-cli/releases/download/0.3.5/bayes_darwin_amd64.zip"
+  url "https://github.com/signcl/bayes-releases/releases/download/0.3.5/bayes_darwin_amd64.zip"
   version "0.3.5"
   sha256 "50a2b988442f46720144908a78a9205e32e68e8e042da286a8f2201e377eb6a3"
 
