@@ -2,9 +2,9 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes console"
   homepage "https://openbayes.com"
-  url "https://github.com/signcl/bayes-releases/releases/download/v0.4.1/bayes_darwin_amd64.zip"
-  version "0.4.1"
-  sha256 "9baed10bad838f7451f3d8c5b81ea83db826f42f557949df2aece8fde8f5bb1e"
+  url "https://github.com/signcl/bayes-releases/releases/download/v0.4.2/bayes_darwin_amd64.zip"
+  version "0.4.2"
+  sha256 "ef894fe59c776afc3f4e6b53cb080ed27b979918e78716ec33084936771672f1"
 
   def install
     bin.install "bayes"
