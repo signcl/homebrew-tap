@@ -2,15 +2,17 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes console"
   homepage "https://openbayes.com"
-  version "0.5.2"
+  version "0.5.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/signcl/bayes-releases/releases/download/v0.5.2/bayes_darwin_amd64.zip"
-    sha256 "5102b645656704e305b59c94c8ae00a743bb76f1f1f5d24a6ec0041b4dfcac38"
+    url "https://github.com/signcl/bayes-releases/releases/download/v0.5.3/bayes_darwin_amd64.zip"
+    sha256 "9348e1047a7a19756df80700372af5af5103f1179d8c7bd88fa4462463a2595e"
   elsif OS.linux?
-    url "https://github.com/signcl/bayes-releases/releases/download/v0.5.2/bayes_linux_amd64.zip"
-    sha256 "77b34fb0a8c93c692f6ca83b6a38bddbdd605e1f18047e5ae0b12cbf31a74465"
+    if Hardware::CPU.intel?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.5.3/bayes_linux_amd64.zip"
+      sha256 "188e281242c1c5db8e05a0bd8c76c4bfaf3cc40e127829a91b596c6aa2fbc421"
+    end
   end
 
   def install
