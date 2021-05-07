@@ -10,11 +10,11 @@ class Bayes < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/signcl/bayes-releases/releases/download/v0.9.1/bayes_darwin_amd64.zip"
-    sha256 "0ee20b9316ed1f5937d745bbd48ad407e18c439c6b1d653d934910ea852acdc7"
+    sha256 "ff71d430852eac949b972f5c776b145fbd0a4f4bcfc29bcf05cb431ec2f46c1e"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/signcl/bayes-releases/releases/download/v0.9.1/bayes_linux_amd64.zip"
-    sha256 "bbb9be2cbb93820589b4a691c16f3e8eeb516cf635a84da59a219e4ee99b165e"
+    sha256 "55a1a335fc2987256980f6b8f8b8a02603014788b555e22ba8fbd791f49ad01a"
   end
 
   def install
