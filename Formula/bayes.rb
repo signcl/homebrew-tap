@@ -5,28 +5,32 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes console"
   homepage "https://openbayes.com"
-  version "0.10.0"
+  version "0.10.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.0/bayes_darwin_amd64.zip"
-      sha256 "38e31a149f264bd8024bc04dd46ccbe72b521bc9aed98c72133f0a87b18f8a57"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_darwin_amd64.zip"
+      sha256 "aef3f65dc95ef66e16b44e66af6d7923de9e642f6426c7c562bdf32e1532bac8"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_darwin_arm64.zip"
+      sha256 "78db14b2c20fe96c50b03bf55fe5aa5bd93eaca513596e30eae8ae9238bda617"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.0/bayes_linux_amd64.zip"
-      sha256 "0aa1a2c5204e8d8a7ed9f743a4c2b4466270fcdccffdef641d7a36a6431a467f"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_amd64.zip"
+      sha256 "71119343d97106c1083e9817d62630dda1d5c1f7b43aba0849a29afbc8e181ba"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.0/bayes_linux_arm.zip"
-      sha256 "f2f78e7b7dc89d3ca2619565dc16ee5b8de56983b81f3fbdd4dd8bcdca2af57a"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_arm.zip"
+      sha256 "6a1d559990caa521f3c5bf05a1facaf73faa7d5bb28d3ca7aaa3417c2e8230dd"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.0/bayes_linux_arm64.zip"
-      sha256 "dcb6e1ae204eca904476b77784056d88c29829cbbd124f05cc958bd2ff8206ca"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_arm64.zip"
+      sha256 "c37140f5f3cdade3917cf731d0b479a23b928432c915700babe36ed2e5651ec8"
     end
   end
 
