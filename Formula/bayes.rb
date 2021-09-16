@@ -5,32 +5,32 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes console"
   homepage "https://openbayes.com"
-  version "0.10.1"
+  version "0.12.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_darwin_amd64.zip"
-      sha256 "aef3f65dc95ef66e16b44e66af6d7923de9e642f6426c7c562bdf32e1532bac8"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.12.0/bayes_darwin_amd64.zip"
+      sha256 "184eb25a0281ec6eb9ad16c9237fbff26a4bb974c4d3248bf14ab3930c796653"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_darwin_arm64.zip"
-      sha256 "78db14b2c20fe96c50b03bf55fe5aa5bd93eaca513596e30eae8ae9238bda617"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.12.0/bayes_darwin_arm64.zip"
+      sha256 "8e2eb1e7706c56b8b95723ccff4adbe2c2d504c92a1547230fdc720192c54cd8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_amd64.zip"
-      sha256 "71119343d97106c1083e9817d62630dda1d5c1f7b43aba0849a29afbc8e181ba"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.12.0/bayes_linux_amd64.zip"
+      sha256 "9193037809061e67120b10540a713d71e32df36f6e7fab3b3a2dac4ac85aca84"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_arm.zip"
-      sha256 "6a1d559990caa521f3c5bf05a1facaf73faa7d5bb28d3ca7aaa3417c2e8230dd"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.12.0/bayes_linux_arm.zip"
+      sha256 "cf21ddd2584a63e9dc99a010c5fa235787b515693741479c7f69571f8943a663"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.10.1/bayes_linux_arm64.zip"
-      sha256 "c37140f5f3cdade3917cf731d0b479a23b928432c915700babe36ed2e5651ec8"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.12.0/bayes_linux_arm64.zip"
+      sha256 "e41902ac9aded63646f23bdea38ebf34fd2ff6944add8ef24e5ba3f40626e87a"
     end
   end
 
