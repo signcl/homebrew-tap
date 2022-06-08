@@ -5,20 +5,20 @@
 class Bayes < Formula
   desc "CLI command-line tools for OpenBayes console"
   homepage "https://openbayes.com"
-  version "0.14.10"
+  version "0.14.11"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.10/bayes_darwin_arm64.zip"
-      sha256 "94834dea9b8e95a8948dba9cc2a8081bbc63fb244d03072e117ab9f9cb46f884"
+    if Hardware::CPU.intel?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.11/bayes_darwin_amd64.zip"
+      sha256 "61b5d920b98c479c8c12eb8717785685c6942530b5d4cc7ae11e5afc812b4176"
 
       def install
         bin.install "bayes"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.10/bayes_darwin_amd64.zip"
-      sha256 "86ee9eab2fb9199cfac7e932a16cc7ec4914577252880495cacefabb73e2074c"
+    if Hardware::CPU.arm?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.11/bayes_darwin_arm64.zip"
+      sha256 "bbfeccb9c2dc22c8a8d167a98ffbf015a7a1e534a9d7d7c0b63c5ec271b619ab"
 
       def install
         bin.install "bayes"
@@ -27,25 +27,25 @@ class Bayes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.10/bayes_linux_arm.zip"
-      sha256 "fa92154c82566e5e7f5fdc64865917d67766512fc62b7a569807fc2ebd5aa23c"
+    if Hardware::CPU.intel?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.11/bayes_linux_amd64.zip"
+      sha256 "bf9ec5d67afecb1baaf72afbe9b197322a5eef1e451c04e720547fbcdbf05716"
 
       def install
         bin.install "bayes"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.10/bayes_linux_amd64.zip"
-      sha256 "6e46ac3df226c1abd5c8bf6b38fff07f129ba6711d76c2c426f92cd46c3b2c4c"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.11/bayes_linux_arm.zip"
+      sha256 "0c288ab6bbca51b0ad7d8492a1cac7c1914ee630cfeb1b9470ebccb5371c3855"
 
       def install
         bin.install "bayes"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.10/bayes_linux_arm64.zip"
-      sha256 "d1ad4598b07c46cfa9f62e9d618016da9f4c9fee2349dd8d96de88fc03c06deb"
+      url "https://github.com/signcl/bayes-releases/releases/download/v0.14.11/bayes_linux_arm64.zip"
+      sha256 "399df4be57b9ca0adf0957ea1de6d2d4dafb630a881fe83117cdad8b557eba89"
 
       def install
         bin.install "bayes"
